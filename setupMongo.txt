@@ -1,0 +1,20 @@
+# Enter mongo shell
+"C:\Program Files\MongoDB\Server\4.2\bin\mongo.exe"
+
+# Create mongo admin account
+db.createUser(
+  {
+    user: "admin",
+    pwd: passwordPrompt(),
+    roles: [ { role: "userAdminAnyDatabase", db: "admin" }, "readWriteAnyDatabase" ]
+  }
+)
+
+# Exit shell
+exit
+
+# Create mongo db for this application
+"C:\Program Files\MongoDB\Server\4.2\bin\mongo.exe" admin -u admin -p admin < setupMongoDB.js
+
+# Seed mongodb collection called configs for this application
+"C:\Program Files\MongoDB\Server\4.2\bin\mongoimport.exe" --db elite_bgs --collection configs --file setupMongoConfigsCollection.json

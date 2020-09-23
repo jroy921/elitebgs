@@ -1,0 +1,24 @@
+{ 
+    "guild_id" : "[Discord guild id where you want the website bot to notify]", 
+    "admin_channel_id" : "[Discord channel id where you want the website bot to notify", 
+    "time_offset" : 60000, 
+    "blacklisted_software" : [
+        "^ed-ibe (api)$", 
+        "^ed central production server$", 
+        "^eliteocr$", 
+        "^regulatednoise__dj$", 
+        "^ocellus - elite: dangerous assistant$", 
+        "^eva"
+    ], 
+    "version_software" : [
+        {
+            "name" : "E:D Market Connector [Windows]", 
+            "version" : "2.4.2.0"
+        }, 
+        {
+            "name" : "E:D Market Connector [Linux]", 
+            "version" : "2.4.2.0"
+        }
+    ], 
+    "user_role_id" : "[Discord role id for new members in the Discord server]"
+}
